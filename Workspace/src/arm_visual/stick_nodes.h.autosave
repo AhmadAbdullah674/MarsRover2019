@@ -1,0 +1,23 @@
+#ifndef MYITEM_H
+#define STICK_NODES_H
+#include <QGraphicsItem>
+#include <QPainter>
+#include <QPaintEvent>
+#include <QDialog>
+
+class stick_nodes:public QDialog, public QGraphicsItem
+{
+public:
+    //stick_nodes(int x_intial,int y_intial);
+    stick_nodes();
+    //~stick_nodes();
+    //void fetching();
+    void paintEvent(QPaintEvent * e);
+    void paint(QPainter *painter,
+               const QStyleOptionGraphicsItem *option,
+               QWidget *widget);
+    void advance(int phase);
+    void move();
+};
+
+#endif // STICK_NODES_H
